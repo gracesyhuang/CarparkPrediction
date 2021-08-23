@@ -1,0 +1,5 @@
+package sg.edu.iss.CarparkDashboard.service;
+@Service
+public class CarkparkServiceImpl implments Carpark {
+
+}

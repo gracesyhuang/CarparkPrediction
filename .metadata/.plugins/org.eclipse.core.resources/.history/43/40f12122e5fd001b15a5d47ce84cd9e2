@@ -1,0 +1,13 @@
+package sg.edu.iss.CarparkDashboard.service;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
+
+import sg.edu.iss.CarparkDashboard.repo.CarparkDashboardRepository;
+
+@Service
+public class CarparkDashboardServiceImpl implements CarparkDashboardService {
+
+	@Autowired
+	CarparkDashboardRepository cdrepo;
+}

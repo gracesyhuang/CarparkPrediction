@@ -1,0 +1,7 @@
+package sg.edu.iss.CarparkDashboard.repo;
+
+import org.springframework.data.jpa.repository.JpaRepository;
+
+public interface CarparkRepository extends JpaRepository<T, ID> {
+
+}

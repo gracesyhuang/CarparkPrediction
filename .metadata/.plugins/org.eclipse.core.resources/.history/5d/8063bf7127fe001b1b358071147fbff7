@@ -1,0 +1,22 @@
+package sg.edu.iss.CarparkDashboard.service;
+
+import java.util.List;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
+
+import sg.edu.iss.CarparkDashboard.model.Carpark;
+import sg.edu.iss.CarparkDashboard.repo.CarparkDashboardRepository;
+
+@Service
+public class CarparkDashboardServiceImpl implements CarparkDashboardService {
+
+	@Autowired
+	CarparkDashboardRepository cdrepo;
+
+	@Override
+	public List<Carpark> findByCarpark(Carpark carpark) {
+		// TODO Auto-generated method stub
+		return null;
+	}
+}

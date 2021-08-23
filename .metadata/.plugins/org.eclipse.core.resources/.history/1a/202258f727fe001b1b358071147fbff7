@@ -1,0 +1,10 @@
+package sg.edu.iss.CarparkDashboard.repo;
+
+import org.springframework.data.jpa.repository.JpaRepository;
+
+import sg.edu.iss.CarparkDashboard.model.Carpark;
+
+public interface CarparkDashboardRepository extends JpaRepository<Carpark, Integer> {
+	
+
+}

@@ -1,0 +1,29 @@
+package sg.edu.iss.CarparkDashboard.controller;
+
+import java.util.LinkedHashMap;
+import java.util.Map;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Controller;
+import org.springframework.ui.Model;
+import org.springframework.web.bind.annotation.GetMapping;
+
+import sg.edu.iss.CarparkDashboard.service.CarparkDashboardService;
+
+@Controller
+public class ChartController {
+	
+	@Autowired
+	CarparkDashboardService cdservice;
+	
+	@GetMapping("/displayBarGraph")
+	public String barGraph(Model model) {
+		Map<String, Integer> surveyMap = new LinkedHashMap<>();
+		surveyMap.put("Java",40);
+		surveyMap.put("Dev ops", 25);
+		surveyMap.put("Python",20);
+		surveyMap.put(".NET", 15);
+		model.addAttribute("surveyMap",surveyMap);
+		return "barGraph";
+	}
+}

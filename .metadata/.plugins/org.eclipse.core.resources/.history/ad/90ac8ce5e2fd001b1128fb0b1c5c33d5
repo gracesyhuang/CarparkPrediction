@@ -1,0 +1,5 @@
+package sg.edu.iss.CarparkDashboard.service;
+
+public interface CarkparkDashboardService {
+
+}
