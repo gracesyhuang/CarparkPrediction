@@ -1,5 +1,7 @@
-package sg.edu.iss.CarparkDashboard.model;
+package sg.edu.iss.carparkPrediction.model;
 
+
+import java.time.LocalDate;
 import java.time.LocalDateTime;
 
 import javax.persistence.Entity;
@@ -18,7 +20,8 @@ public class Carpark {
     private String Address ;
     private String LLCoord ;
     private int AvailableLots;
-    private LocalDateTime datetime;
+    private LocalDate Date;
+    private String Time;
     
     
 	public Carpark() {
@@ -26,28 +29,31 @@ public class Carpark {
 		// TODO Auto-generated constructor stub
 	}
 	
-	
-	public Carpark(String address) {
-		super();
-		Address = address;
-	}
 
-
-	public Carpark(String area, String address, String lLCoord, int availableLots) {
+	public Carpark(int id, String area, String address, String lLCoord, int availableLots, LocalDate date,
+			String time) {
 		super();
+		Id = id;
 		Area = area;
 		Address = address;
 		LLCoord = lLCoord;
 		AvailableLots = availableLots;
+		Date = date;
+		Time = time;
 	}
-	
-	public Carpark(String area, String address, int availableLots, LocalDateTime datetime) {
+
+
+
+	public Carpark(String area, String address, int availableLots, LocalDate date, String time) {
 		super();
 		Area = area;
 		Address = address;
 		AvailableLots = availableLots;
-		this.datetime = datetime;
+		Date = date;
+		Time = time;
 	}
+
+
 
 	public int getId() {
 		return Id;
@@ -80,11 +86,26 @@ public class Carpark {
 		AvailableLots = availableLots;
 	}
 
-	public LocalDateTime getDatetime() {
-		return datetime;
+
+	public LocalDate getDate() {
+		return Date;
 	}
 
-	public void setDatetime(LocalDateTime datetime) {
-		this.datetime = datetime;
+
+	public void setDate(LocalDate date) {
+		Date = date;
 	}
+
+
+	public String getTime() {
+		return Time;
+	}
+
+
+	public void setTime(String time) {
+		Time = time;
+	}
+
+
 }
+
